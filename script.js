@@ -9,7 +9,7 @@ const wordList = [
 // MAPPING KHUSUS UNTUK KESULITAN SULIT (4 Nyawa / 5 Gambar)
 // Indeks Array: Jumlah Kesalahan (0, 1, 2, 3, 4)
 // Nilai Array: Indeks Gambar Dummy yang akan digunakan
-const SULIT_IMAGE_MAP = [0, 3, 4, 6, 7]; 
+const SULIT_IMAGE_MAP = [0, 2, 3, 5, 7]; 
 
 // Variabel Global
 let currentWord = "";
