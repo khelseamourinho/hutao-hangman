@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Game Tebak Kata Hangman</h1>
+        
+        <div id="difficulty-selection">
+          <div class="hangman-box-difficulty-selection">
+            <img src="images/dummy-7.png" alt="Gambar Hangman">
+          </div>        
+            <h2>Pilih Tingkat Kesulitan</h2>
+            <button onclick="startGame('mudah')">Mudah ❤ : 7 </button>
+            <button onclick="startGame('sulit')">Sulit ❤ : 4 </button>
+        </div>
+
+        <div id="game-area" style="display: none;">
+            
+            <div class="hangman-box">
+                <img id="hangman-img" src="images/dummy-0.png" alt="Gambar Hangman">
+            </div>
+            
+            <div class="game-info">
+                <p>❤: <span id="lives-count"></span></p>
+                <div id="word-display" class="word-display">
+                    </div>
+            </div>
+            
+            <div id="keyboard" class="keyboard">
+                </div>
+
+            <div id="game-message" class="message"></div>
+            <button id="play-again-btn" onclick="resetGame()" style="display: none;">Main Lagi</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
