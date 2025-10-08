@@ -4,43 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-
-    <div class="game-container">
-        <h1>Game Tebak Kata Hangman</h1>
-        
-        <div id="difficulty-selection">
-          <div class="hangman-box-difficulty-selection">
-            <img src="images/dummy-7.png" alt="Gambar Hangman">
-          </div>        
-            <h2>Pilih Tingkat Kesulitan</h2>
-            <button onclick="startGame('mudah')">Mudah ❤ : 7 </button>
-            <button onclick="startGame('sulit')">Sulit ❤ : 4 </button>
-        </div>
-
-        <div id="game-area" style="display: none;">
+    <div class="container my-5">
+        <div class="game-container card shadow-lg p-4">
+            <h1 class="text-center mb-4">🎮 Game Tebak Kata Hangman</h1>
             
-            <div class="hangman-box">
-                <img id="hangman-img" src="images/dummy-0.png" alt="Gambar Hangman">
-            </div>
-            
-            <div class="game-info">
-                <p>❤: <span id="lives-count"></span></p>
-                <div id="word-display" class="word-display">
-                    </div>
-            </div>
-            
-            <div id="keyboard" class="keyboard">
+            <div id="difficulty-selection">
+                <div class="hangman-box-difficulty-selection mb-4 text-center">
+                    <img src="images/dummy-7.png" alt="Gambar Hangman" style="max-width: 300px;">
                 </div>
+                <h2 class="h4 mb-4 text-center" style="color: var(--dark-gray);">Pilih Tingkat Kesulitan</h2>
+                <div class="d-grid gap-3 col-md-6 mx-auto">
+                    <button class="difficulty-btn easy" onclick="startGame('mudah')">
+                        <span style="font-size: 1.3rem;">😊 MUDAH</span><br>
+                        <small>❤️ 7 Nyawa</small>
+                    </button>
+                    <button class="difficulty-btn hard" onclick="startGame('sulit')">
+                        <span style="font-size: 1.3rem;">😈 SULIT</span><br>
+                        <small>❤️ 4 Nyawa</small>
+                    </button>
+                </div>
+            </div>
 
-            <div id="game-message" class="message"></div>
-            <button id="play-again-btn" onclick="resetGame()" style="display: none;">Main Lagi</button>
+            <div id="game-area" style="display: none;">
+                <div class="row">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <div class="hangman-box text-center">
+                            <img id="hangman-img" src="images/dummy-0.png" alt="Gambar Hangman">
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        <div class="game-info">
+                            <div class="text-center mb-3">
+                                <div class="lives-display">
+                                    ❤️ <span id="lives-count"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="hint-box">
+                                <strong style="color: var(--dark-gray);">💡 Petunjuk:</strong>
+                                <div id="word-hint" style="color: var(--accent-blue); font-size: 1.1rem; font-weight: 600; margin-top: 5px;"></div>
+                            </div>
+                            
+                            <div id="word-display" class="word-display"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="keyboard" class="keyboard mt-4"></div>
+                <div id="game-message" class="message my-4 alert" role="alert"></div>
+                <div class="text-center">
+                    <button id="play-again-btn" onclick="resetGame()" style="display: none;" class="btn btn-play-again btn-lg text-white">
+                        🔄 Main Lagi
+                    </button>
+                </div>
+            </div>
         </div>
-
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
