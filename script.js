@@ -6,7 +6,7 @@
             { word: "DATABASE", hint: "Kumpulan data yang tersimpan secara terstruktur" }
         ];
 
-        const SULIT_IMAGE_MAP = [0, 3, 4, 6, 8];
+        const SULIT_IMAGE_MAP = [0, 2, 3, 5, 7];
 
         let currentWord = "";
         let incorrectGuesses = 0;
